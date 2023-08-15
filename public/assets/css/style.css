@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.lesson:hover {
+    border: 1px solid black;
+}
+
+.scroll {
+    height: 700px;
+    overflow-y: scroll;
+    padding-bottom: 20px;
+}
+
+.scroll-lesson {
+    height: 700px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.faq-edit {
+    position: relative;
+    top: -40px;
+    right: 30px;
+}
