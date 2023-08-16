@@ -134,7 +134,7 @@
   });
 
   $('div.myDiv').hide();
-  $('#showOne').show();
+  $('.default').show();
   $('#myselection').on('change', function () {
     var demovalue = $(this).val();
     $("div.myDiv").hide();

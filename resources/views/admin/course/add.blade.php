@@ -73,7 +73,7 @@
                                                             <div class="form-group">
                                                                 <label class="form-label">Category</label>
                                                                 <div class="form-control-wrap">
-                                                                    <select class="form-select js-select2">
+                                                                    <select class="form-select js-select2 select2-hidden-accessible" multiple data-placeholder="e.g Web Development, Web Design">
                                                                         <option value="web-development">Web Development
                                                                         </option>
                                                                         <option value="graphics-design">Graphics Design
@@ -168,7 +168,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-xxl-12 myDiv" id="showOne">
+                                                        <div class="col-xxl-12 myDiv default" id="showOne">
                                                             <div class="form-group">
                                                                 <label class="form-label">Youtube URL</label>
                                                                 <div class="form-control-wrap">

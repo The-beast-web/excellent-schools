@@ -213,6 +213,14 @@
                 },
             });
 
+            $('div.myDiv').hide();
+            $('.default').show();
+            $('#field-5').on('change', function () {
+              var demovalue = $(this).val();
+              $("div.myDiv").hide();
+              $("#show" + demovalue).show();
+            });
+
             var swiper = new Swiper('.blog-post-gallery-activation', {
                 slidesPerView: 1,
                 autoHeight: true,

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use App\Http\Controllers\Admin\BookController as AdminBookController;
+use App\Http\Controllers\Admin\CourseBuilderController;
 use App\Http\Controllers\Admin\CourseController as AdminCourseController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
@@ -242,4 +243,9 @@ Route::prefix('/admin')->name('admin.')->group(function () {
     Route::get('/setting', [SettingController::class, 'index'])->name('setting');
     /* End of Setting Routes */
 
+    /* Course Builder Routes */
+    Route::prefix('/course-builder')->name('course-builder.')->group(function () {
+        Route::get('/', [CourseBuilderController::class, 'index'])->name('main');
+        Route::get('/create-lesson', [CourseBuilderController::class, 'create_lesson'])->name('lesson.create');
+    });
 });

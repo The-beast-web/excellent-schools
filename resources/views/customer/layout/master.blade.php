@@ -92,6 +92,7 @@
     <script src="{{ asset('assets2/js/vendor/plyr.js') }}"></script>
     <!-- Main JS -->
     <script src="{{ asset('assets2/js/main.js') }}"></script>
+    <script src="{{ asset('assets2/js/script.js') }}"></script>
 </body>
 
 </html>

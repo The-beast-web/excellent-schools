@@ -519,7 +519,7 @@
                                                 </h4>
                                             </div>
                                             <div class="text-center">
-                                                <a href="#" class="btn btn-wider btn-primary"
+                                                <a href="{{ route('admin.course-builder.main') }}" class="btn btn-wider btn-primary"
                                                     style="height: 50px"><span>Open with Course Builder</span><em
                                                         class="icon ni ni-arrow-right"></em></a>
                                             </div>
