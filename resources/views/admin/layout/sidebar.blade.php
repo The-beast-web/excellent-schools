@@ -33,6 +33,7 @@
                         'admin.lesson-detail',
                         'admin.course-category',
                         'admin.course-orders',
+                        'admin.create-course'
                     ]) !!}">
                         <a href="{{ route('admin.courses') }}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-property"></em></span>

@@ -184,6 +184,7 @@ Route::prefix('/admin')->name('admin.')->group(function () {
     Route::get('/lesson-detail', [AdminCourseController::class, 'lesson_detail'])->name('lesson-detail');
     Route::get('/course-category', [AdminCourseController::class, 'category'])->name('course-category');
     Route::get('/course-orders', [AdminCourseController::class, 'order'])->name('course-orders');
+    Route::get('/create-course', [AdminCourseController::class, 'add'])->name('create-course');
     /* End of Course Routes */
 
     /* Book Routes */
@@ -239,4 +240,6 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 
     /* Setting Routes */
     Route::get('/setting', [SettingController::class, 'index'])->name('setting');
+    /* End of Setting Routes */
+
 });

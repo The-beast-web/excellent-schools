@@ -30,4 +30,9 @@ class CourseController extends Controller
     public function order(){
         return view('admin.course.orders');
     }
+
+    public function add()
+    {
+        return view('admin.course.add');
+    }
 }

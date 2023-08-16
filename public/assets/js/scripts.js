@@ -26,9 +26,9 @@
   }
 
   $('#bt_submit').attr("disabled", true);
-  $("#note").click(function() {
+  $("#note").click(function () {
     $("#bt_submit").attr("disabled", !this.checked);
- });
+  });
 
   let clockTimeout = null
   clearTimeout(clockTimeout)
@@ -127,6 +127,20 @@
         }
       });
     }; */
+
+  $('#customCheck1').click(function () {
+    var input = $('.price');
+    input.fadeToggle();
+  });
+
+  $('div.myDiv').hide();
+  $('#showOne').show();
+  $('#myselection').on('change', function () {
+    var demovalue = $(this).val();
+    $("div.myDiv").hide();
+    $("#show" + demovalue).show();
+  });
+
 
   // PasswordSwitch @v1.0
   NioApp.PassSwitch = function () {
