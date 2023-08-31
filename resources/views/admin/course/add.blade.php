@@ -16,6 +16,7 @@
                         <div class="nk-block nk-block-lg">
                             <div class="card card-bordered card-preview">
                                 <div class="card-inner">
+                                    <form action="" id="create-course">
                                     <div id="accordion-1" class="accordion accordion-s2">
                                         <div class="accordion-item">
                                             <a href="#" class="accordion-head" data-bs-toggle="collapse"
@@ -27,24 +28,14 @@
                                                 data-bs-parent="#accordion-1">
                                                 <div class="accordion-inner">
                                                     <div class="row g-4">
-                                                        <div class="col-xxl-6">
+                                                        <div class="col-xxl-12">
                                                             <div class="form-group">
                                                                 <label for="title" class="form-label">Course
                                                                     Title</label>
                                                                 <div class="form-control-wrap">
-                                                                    <input type="text"
+                                                                    <input type="text" name="course_title"
                                                                         class="form-control form-control-lg"
                                                                         placeholder="New Course">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xxl-6">
-                                                            <div class="form-group">
-                                                                <label for="title" class="form-label">Course Slug</label>
-                                                                <div class="form-control-wrap">
-                                                                    <input type="text"
-                                                                        class="form-control form-control-lg"
-                                                                        placeholder="new-course">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -53,7 +44,7 @@
                                                                 <label for="title" class="form-label">Course
                                                                     Description</label>
                                                                 <div class="form-control-wrap">
-                                                                    <textarea name="" class="form-control" id="" cols="30" rows="10" placeholder="Hello World!"></textarea>
+                                                                    <textarea name="course_desc" class="form-control" id="" cols="30" rows="10" placeholder="Hello World!"></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -61,7 +52,7 @@
                                                             <div class="form-group">
                                                                 <label class="form-label">Level</label>
                                                                 <div class="form-control-wrap">
-                                                                    <select class="form-select js-select2">
+                                                                    <select class="form-select js-select2" name="course_level">
                                                                         <option value="begineer">Begineer</option>
                                                                         <option value="intermediate">Intermediate</option>
                                                                         <option value="advanced">Advanced</option>
@@ -73,7 +64,7 @@
                                                             <div class="form-group">
                                                                 <label class="form-label">Category</label>
                                                                 <div class="form-control-wrap">
-                                                                    <select class="form-select js-select2 select2-hidden-accessible" multiple data-placeholder="e.g Web Development, Web Design">
+                                                                    <select class="form-select js-select2 select2-hidden-accessible" name="course_category" multiple data-placeholder="e.g Web Development, Web Design">
                                                                         <option value="web-development">Web Development
                                                                         </option>
                                                                         <option value="graphics-design">Graphics Design
@@ -92,7 +83,7 @@
                                                                     <div class="form-icon form-icon-left">
                                                                         <em class="icon ni ni-sign-kobo"></em>
                                                                     </div>
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" name="regular_price" class="form-control"
                                                                         id="default-03" placeholder="00.00">
                                                                 </div>
                                                             </div>
@@ -106,14 +97,14 @@
                                                                         <em class="icon ni ni-sign-kobo"></em>
                                                                     </div>
                                                                     <input type="text" class="form-control"
-                                                                        id="default-03" placeholder="00.00">
+                                                                        id="default-03" name="discounted_price" placeholder="00.00">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-12">
                                                             <div class="form-group">
                                                                 <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input"
+                                                                    <input type="checkbox" name="free_course" class="custom-control-input"
                                                                         id="customCheck1">
                                                                     <label class="custom-control-label"
                                                                         for="customCheck1">Free Course</label>
@@ -154,7 +145,7 @@
                                                                 <label class="form-label">Video Source</label>
                                                                 <div class="form-control-wrap">
                                                                     <select class="form-select js-select2"
-                                                                        id="myselection">
+                                                                        id="myselection" name="video_source">
                                                                         <option value="One">
                                                                             Youtube
                                                                         </option>
@@ -172,7 +163,7 @@
                                                             <div class="form-group">
                                                                 <label class="form-label">Youtube URL</label>
                                                                 <div class="form-control-wrap">
-                                                                    <input type="text"
+                                                                    <input type="text" name="youtube"
                                                                         class="form-control form-control-lg"
                                                                         placeholder="e.g https://www.youtube.com/watch?v=yourvideoid">
                                                                 </div>
@@ -182,7 +173,7 @@
                                                             <div class="form-group">
                                                                 <label class="form-label">Vimeo URL</label>
                                                                 <div class="form-control-wrap">
-                                                                    <input type="text"
+                                                                    <input type="text" name="vimeo"
                                                                         class="form-control form-control-lg"
                                                                         placeholder="e.g https://www.youtube.com/watch?v=yourvideoid">
                                                                 </div>
@@ -222,7 +213,7 @@
                                                                 <label for="" class="form-label">Start
                                                                     Date</label>
                                                                 <div class="form-control-wrap">
-                                                                    <input type="text"
+                                                                    <input type="text" name="start_date"
                                                                         class="form-control date-picker">
                                                                 </div>
                                                             </div>
@@ -231,7 +222,7 @@
                                                             <div class="form-group" data-select2-id="13">
                                                                 <label class="form-label">Language</label>
                                                                 <div class="form-control-wrap" data-select2-id="12">
-                                                                    <select class="form-select js-select2 select2-hidden-accessible" data-search="on" data-select2-id="6" tabindex="-1" aria-hidden="true">
+                                                                    <select class="form-select js-select2 select2-hidden-accessible" name="language" data-search="on" data-select2-id="6" tabindex="-1" aria-hidden="true">
                                                                         <option value="english">English</option>
                                                                         <option value="igbo">Igbo</option>
                                                                         <option value="french">French</option>
@@ -244,8 +235,8 @@
                                                                 <label for="" class="form-label">Total Course Duration</label>
                                                                 <div class="form-control-wrap">
                                                                     <div class="input-group">
-                                                                        <input type="text" class="form-control" placeholder="00hr">
-                                                                        <input type="text" class="form-control" placeholder="00mins">
+                                                                        <input type="text" name="duration" class="form-control" placeholder="00hr">
+                                                                        <input type="text" name="duration" class="form-control" placeholder="00mins">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -255,10 +246,11 @@
                                             </div>
                                         </div>
                                     </div>
+                                    </form>
                                 </div>
                             </div><!-- .card-preview -->
                             <div class="text-center mt-4">
-                                <button class="btn btn-primary p-4" style="border-radius: 50px;">Create Course <em class="ni ni-arrow-right"></em></button>
+                                <button type="button" onclick="$('#create-course').submit();" class="btn btn-primary p-4" style="border-radius: 50px;">Create Course <em class="ni ni-arrow-right"></em></button>
                             </div>
                         </div>
                     </div>
